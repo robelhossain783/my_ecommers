@@ -36,7 +36,8 @@ class ProductCreateSerializer(serializers.ModelSerializer):
             "slug",
             "image",
             "description",
-            "price",
+            "sell_price",
+            "regular_price",
             "stock",
             "is_active",
         ]
