@@ -13,6 +13,8 @@ class ProductListAPIView(APIView):
     def get(self, request):
 
         slug_id = request.query_params.get("slug")
+        start_date = request.query_params.get("start_date")
+        end_date = request.query_params.get("end_date")
 
         products = Product.objects.filter(
             is_active=True
@@ -20,6 +22,12 @@ class ProductListAPIView(APIView):
 
         if slug_id:
             products = products.filter(category__slug=slug_id)
+
+        if start_date and end_date:
+            products = products.filter(
+                created_at__date__gte=start_date,
+                created_at__date__lte=end_date
+            )
 
         serializer = ProductSerializer(products, many=True)
 

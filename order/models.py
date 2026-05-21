@@ -4,6 +4,12 @@ import uuid
 from product.models import Product
 
 
+class PaymentMethod(models.TextChoices):
+    COD = 'COD', 'Cash on Delivery'
+    BKASH = 'BKASH', 'bKash'
+    NAGAD = 'NAGAD', 'Nagad'
+
+
 class Order(models.Model):
 
     STATUS_CHOICES = (
@@ -24,7 +30,11 @@ class Order(models.Model):
         default=uuid.uuid4,
         editable=False
     )
-
+    payment_type = models.CharField(
+        max_length=10,
+        choices=PaymentMethod.choices,
+        default=PaymentMethod.COD
+    )
     full_name = models.CharField(max_length=255)
     phone = models.CharField(max_length=20)
     address = models.TextField()

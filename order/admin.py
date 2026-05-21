@@ -14,9 +14,12 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = [
         "id",
         "user",
+        "full_name",
         "phone",
         "total_amount",
         "status",
+        "payment_type",
+        "address",
         "created_at",
     ]
 
