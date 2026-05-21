@@ -48,19 +48,19 @@ urlpatterns = [
 # =========================
 # LOCAL MEDIA (DEBUG ONLY)
 # =========================
-if settings.DEBUG:
-    urlpatterns += static(
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT
-    )
+# if settings.DEBUG:
+#     urlpatterns += static(
+#         settings.MEDIA_URL,
+#         document_root=settings.MEDIA_ROOT
+#     )
 
 # =========================
 # PRODUCTION MEDIA (Render FIX)
-# =========================
-urlpatterns += [
-    re_path(
-        r'^media/(?P<path>.*)$',
-        serve,
-        {'document_root': settings.MEDIA_ROOT}
-    ),
-]
+# # =========================
+# urlpatterns += [
+#     re_path(
+#         r'^media/(?P<path>.*)$',
+#         serve,
+#         {'document_root': settings.MEDIA_ROOT}
+#     ),
+# ]
