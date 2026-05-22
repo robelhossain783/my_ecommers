@@ -40,7 +40,7 @@ class Product(models.Model):
     slug = models.SlugField(unique=True)
 
     # image = models.ImageField(upload_to="products/")
-    image = CloudinaryField("image")
+    image = models.ImageField(upload_to="products/", blank=True, null=True)
     description = models.TextField(blank=True)
 
     sell_price = models.DecimalField(max_digits=10, decimal_places=2)
