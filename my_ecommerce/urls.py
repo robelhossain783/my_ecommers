@@ -43,7 +43,14 @@ urlpatterns = [
     path('api/', include('product.urls')),
     path('api/', include('cart.urls')),
     path('api/', include('order.urls')),
+
+    # এই লাইনটি যোগ করা হলো: DEBUG = False হলেও যাতে জ্যাঙ্গো মিডিয়া ফাইল সার্ভ করতে পারে
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
+
+# লোকাল ডেভেলপমেন্টের (DEBUG = True) সুরক্ষার জন্য এটিও রাখতে পারেন
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # =========================
 # LOCAL MEDIA (DEBUG ONLY)
