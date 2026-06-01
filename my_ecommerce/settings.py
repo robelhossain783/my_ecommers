@@ -171,6 +171,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+# pyrefly: ignore [missing-import]
 import dj_database_url
 
 load_dotenv()
@@ -194,30 +195,22 @@ ALLOWED_HOSTS = os.environ.get(
 # ========================
 # APPLICATIONS
 # ========================
-SYSTEM_APPS = [
+INSTALLED_APPS = [
+    'cloudinary_storage',  # must be before staticfiles
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
-
-THIRD_PARTY_APPS = [
+    'cloudinary',  # must be after staticfiles
     'rest_framework',
     'django_extensions',
     'corsheaders',
-    'cloudinary',
-    'cloudinary_storage',
-]
-
-LOCAL_APPS = [
     'product',
     'cart',
     'order',
 ]
-
-INSTALLED_APPS = SYSTEM_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 
 # ========================
@@ -330,15 +323,45 @@ REST_FRAMEWORK = {
     ]
 }
 
-import os
+# ========================
+# CLOUDINARY STORAGE WITH FALLBACK
+# ========================
+CLOUDINARY_CLOUD_NAME = os.getenv('CLOUDINARY_CLOUD_NAME')
+CLOUDINARY_API_KEY = os.getenv('CLOUDINARY_API_KEY')
+CLOUDINARY_API_SECRET = os.getenv('CLOUDINARY_API_SECRET')
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+if CLOUDINARY_CLOUD_NAME and CLOUDINARY_API_KEY and CLOUDINARY_API_SECRET:
+    # Use Cloudinary in Production (Render)
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': CLOUDINARY_CLOUD_NAME,
+        'API_KEY': CLOUDINARY_API_KEY,
+        'API_SECRET': CLOUDINARY_API_SECRET,
+    }
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    
+    # Modern Django 4.2+ STORAGES
+    STORAGES = {
+        "default": {
+            "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
+    print("✨ Production Storage: Cloudinary successfully configured.")
+else:
+    # Fallback to local file storage for development (localhost)
+    DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+    
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
+    print("💻 Development Storage: Local filesystem fallback active.")
 
 
 
