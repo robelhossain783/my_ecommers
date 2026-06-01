@@ -257,9 +257,13 @@ WSGI_APPLICATION = 'my_ecommerce.wsgi.application'
 # ========================
 # DATABASE
 # ========================
+database_url = os.environ.get("DATABASE_URL")
+if not database_url:
+    database_url = f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL"),
+        default=database_url,
         conn_max_age=600
     )
 }
