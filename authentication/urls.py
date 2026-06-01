@@ -3,11 +3,11 @@ from .views import *
 
 urlpatterns = [
     path(
-        "authentication/register/",
+        "auth/register/",
         AdminRegisterAPIView.as_view()
     ),
     path(
-        "authentication/login/",
+        "auth/login/",
         AdminLoginAPIView.as_view()
     ),
 ]
