@@ -45,7 +45,7 @@
 #
 # SYSTEM_APPS = [
 #     'django.contrib.admin',
-#     'django.contrib.auth',
+#     'django.contrib.authentication',
 #     'django.contrib.contenttypes',
 #     'django.contrib.sessions',
 #     'django.contrib.messages',
@@ -69,7 +69,7 @@
 #     'django.contrib.sessions.middleware.SessionMiddleware',
 #     'django.middleware.common.CommonMiddleware',
 #     'django.middleware.csrf.CsrfViewMiddleware',
-#     'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'django.contrib.authentication.middleware.AuthenticationMiddleware',
 #     'django.contrib.messages.middleware.MessageMiddleware',
 #     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 # ]
@@ -95,7 +95,7 @@
 #             'context_processors': [
 #                 'django.template.context_processors.debug',
 #                 'django.template.context_processors.request',
-#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.authentication.context_processors.authentication',
 #                 'django.contrib.messages.context_processors.messages',
 #             ],
 #         },
@@ -123,16 +123,16 @@
 #
 # AUTH_PASSWORD_VALIDATORS = [
 #     {
-#         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+#         'NAME': 'django.contrib.authentication.password_validation.UserAttributeSimilarityValidator',
 #     },
 #     {
-#         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+#         'NAME': 'django.contrib.authentication.password_validation.MinimumLengthValidator',
 #     },
 #     {
-#         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+#         'NAME': 'django.contrib.authentication.password_validation.CommonPasswordValidator',
 #     },
 #     {
-#         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+#         'NAME': 'django.contrib.authentication.password_validation.NumericPasswordValidator',
 #     },
 # ]
 #
@@ -204,7 +204,7 @@
 # # ========================
 # SYSTEM_APPS = [
 #     "django.contrib.admin",
-#     "django.contrib.auth",
+#     "django.contrib.authentication",
 #     "django.contrib.contenttypes",
 #     "django.contrib.sessions",
 #     "django.contrib.messages",
@@ -238,7 +238,7 @@
 #     "django.contrib.sessions.middleware.SessionMiddleware",
 #     "django.middleware.common.CommonMiddleware",
 #     "django.middleware.csrf.CsrfViewMiddleware",
-#     "django.contrib.auth.middleware.AuthenticationMiddleware",
+#     "django.contrib.authentication.middleware.AuthenticationMiddleware",
 #     "django.contrib.messages.middleware.MessageMiddleware",
 #     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 # ]
@@ -259,7 +259,7 @@
 #             "context_processors": [
 #                 "django.template.context_processors.debug",
 #                 "django.template.context_processors.request",
-#                 "django.contrib.auth.context_processors.auth",
+#                 "django.contrib.authentication.context_processors.authentication",
 #                 "django.contrib.messages.context_processors.messages",
 #             ],
 #         },
@@ -285,10 +285,10 @@
 # # PASSWORD VALIDATION
 # # ========================
 # AUTH_PASSWORD_VALIDATORS = [
-#     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
-#     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-#     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-#     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+#     {"NAME": "django.contrib.authentication.password_validation.UserAttributeSimilarityValidator"},
+#     {"NAME": "django.contrib.authentication.password_validation.MinimumLengthValidator"},
+#     {"NAME": "django.contrib.authentication.password_validation.CommonPasswordValidator"},
+#     {"NAME": "django.contrib.authentication.password_validation.NumericPasswordValidator"},
 # ]
 #
 #
@@ -405,6 +405,8 @@ INSTALLED_APPS = [
     'product',
     'cart',
     'order',
+    'authentication',
+    'banner',
 ]
 
 # ========================
@@ -462,10 +464,10 @@ DATABASES = {
 # AUTH
 # ========================
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+    {'NAME': 'django.contrib.authentication.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.authentication.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.authentication.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.authentication.password_validation.NumericPasswordValidator'},
 ]
 
 # ========================
@@ -588,4 +590,3 @@ LOGGING = {
         },
     },
 }
-

@@ -214,3 +214,27 @@ class OrderListAPIView(APIView):
             },
             status=status.HTTP_200_OK
         )
+
+
+class OrderStatusUpdateAPIView(APIView):
+    def post(self, request, pk):
+        try:
+            order = Order.objects.get(pk=pk)
+        except Order.DoesNotExist:
+            return Response({"error": "Order not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+        new_status = request.data.get("status")
+        if not new_status:
+            return Response({"error": "status field is required"}, status=status.HTTP_400_BAD_REQUEST)
+            
+        valid_statuses = [choice[0] for choice in Order.STATUS_CHOICES]
+        if new_status not in valid_statuses:
+            return Response({"error": f"Invalid status. Choose from: {valid_statuses}"}, status=status.HTTP_400_BAD_REQUEST)
+            
+        order.status = new_status
+        order.save()
+        return Response({
+            "message": "Order status updated successfully",
+            "order_id": order.id,
+            "status": order.status
+        }, status=status.HTTP_200_OK)

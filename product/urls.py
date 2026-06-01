@@ -28,4 +28,9 @@ urlpatterns = [
         "products/<slug:slug>/",
         ProductDetailAPIView.as_view()
     ),
+
+    path(
+        "products/<int:pk>/delete/",
+        ProductDeleteAPIView.as_view()
+    ),
 ]

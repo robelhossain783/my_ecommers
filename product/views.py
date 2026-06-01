@@ -16,9 +16,11 @@ class ProductListAPIView(APIView):
         start_date = request.query_params.get("start_date")
         end_date = request.query_params.get("end_date")
 
-        products = Product.objects.filter(
-            is_active=True
-        ).select_related("category")
+        include_inactive = request.query_params.get("all") == "true"
+        if include_inactive:
+            products = Product.objects.all().select_related("category")
+        else:
+            products = Product.objects.filter(is_active=True).select_related("category")
 
         if slug_id:
             products = products.filter(category__slug=slug_id)
@@ -140,3 +142,14 @@ class CategoryListAPIView(APIView):
         )
 
         return Response(serializer.data)
+
+
+class ProductDeleteAPIView(APIView):
+    def delete(self, request, pk):
+        try:
+            product = Product.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+        product.delete()
+        return Response({"message": "Product deleted successfully"}, status=status.HTTP_200_OK)

@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 import uuid
+
+from my_ecommerce import settings
 from product.models import Product
 
 
@@ -20,7 +22,7 @@ class Order(models.Model):
     )
 
     user = models.ForeignKey(
-        "auth.User",
+        User,
         on_delete=models.CASCADE,
         null=True,
         blank=True
