@@ -12,6 +12,11 @@ urlpatterns = [
         "categories/create/",
         CategoryCreateAPIView.as_view()
     ),
+    path(
+        "categories/<int:pk>/delete/",
+        DeleteCategoryAPIView.as_view(),
+        name="delete-category"
+    ),
     # Products
 
     path(
