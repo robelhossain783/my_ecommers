@@ -153,3 +153,22 @@ class ProductDeleteAPIView(APIView):
         
         product.delete()
         return Response({"message": "Product deleted successfully"}, status=status.HTTP_200_OK)
+
+
+class DeleteCategoryAPIView(APIView):
+
+    def delete(self, request, pk):
+        try:
+            category = Category.objects.get(id=pk)
+            category.delete()
+
+            return Response(
+                {"message": "Category deleted successfully"},
+                status=status.HTTP_200_OK
+            )
+
+        except Category.DoesNotExist:
+            return Response(
+                {"error": "Category not found"},
+                status=status.HTTP_404_NOT_FOUND
+            )
