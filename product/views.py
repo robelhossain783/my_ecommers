@@ -16,7 +16,7 @@ class ProductListAPIView(APIView):
         slug_id = request.query_params.get("slug")
         start_date = request.query_params.get("start_date")
         end_date = request.query_params.get("end_date")
-        search = request.query_params.get("search")
+
         include_inactive = request.query_params.get("all") == "true"
         if include_inactive:
             products = Product.objects.all().select_related("category")
@@ -30,12 +30,6 @@ class ProductListAPIView(APIView):
             products = products.filter(
                 created_at__date__gte=start_date,
                 created_at__date__lte=end_date
-            )
-            # Search Logic
-        if search:
-            products = products.filter(
-                Q(name__icontains=search) |
-                Q(description__icontains=search)
             )
 
         serializer = ProductSerializer(products, many=True)
