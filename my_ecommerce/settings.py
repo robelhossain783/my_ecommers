@@ -400,6 +400,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',  # must be after staticfiles
     'rest_framework',
+    'rest_framework_simplejwt',
     'django_extensions',
     'corsheaders',
     'product',
@@ -463,11 +464,26 @@ DATABASES = {
 # ========================
 # AUTH
 # ========================
+# AUTH_PASSWORD_VALIDATORS = [
+#     {'NAME': 'django.contrib.authentication.password_validation.UserAttributeSimilarityValidator'},
+#     {'NAME': 'django.contrib.authentication.password_validation.MinimumLengthValidator'},
+#     {'NAME': 'django.contrib.authentication.password_validation.CommonPasswordValidator'},
+#     {'NAME': 'django.contrib.authentication.password_validation.NumericPasswordValidator'},
+# ]
+
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.authentication.password_validation.UserAttributeSimilarityValidator'},
-    {'NAME': 'django.contrib.authentication.password_validation.MinimumLengthValidator'},
-    {'NAME': 'django.contrib.authentication.password_validation.CommonPasswordValidator'},
-    {'NAME': 'django.contrib.authentication.password_validation.NumericPasswordValidator'},
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
 # ========================
@@ -507,11 +523,21 @@ CSRF_TRUSTED_ORIGINS = [
 # ========================
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ]
+}
+
+from datetime import timedelta
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=8),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': False,
+    'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
 # ========================

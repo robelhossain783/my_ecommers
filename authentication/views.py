@@ -3,10 +3,30 @@ from django.contrib.auth import authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
+
+def get_tokens_for_user(user):
+    refresh = RefreshToken.for_user(user)
+    return {
+        'refresh': str(refresh),
+        'access': str(refresh.access_token),
+    }
 
 
 class AdminRegisterAPIView(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def post(self, request):
+        if not request.user.is_staff and not request.user.is_superuser:
+            return Response(
+                {"error": "Only admins are allowed to register new admin users"},
+                status=status.HTTP_403_FORBIDDEN
+            )
+
         username = request.data.get("username")
         password = request.data.get("password")
         email = request.data.get("email", "")
@@ -43,10 +63,13 @@ class AdminLoginAPIView(APIView):
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_staff or user.is_superuser:
+                tokens = get_tokens_for_user(user)
                 return Response({
                     "message": "Login successful",
                     "username": user.username,
-                    "is_staff": user.is_staff
+                    "is_staff": user.is_staff,
+                    "access": tokens["access"],
+                    "refresh": tokens["refresh"],
                 }, status=status.HTTP_200_OK)
             else:
                 return Response(

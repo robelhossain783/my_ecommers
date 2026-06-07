@@ -1,8 +1,10 @@
 from rest_framework import serializers
 from .models import Order, OrderItem, PaymentMethod
+from product.serializers import ProductSerializer
 
 
 class OrderItemSerializer(serializers.ModelSerializer):
+    product = ProductSerializer(read_only=True)
 
     class Meta:
         model = OrderItem
@@ -35,6 +37,7 @@ class CreateOrderSerializer(serializers.Serializer):
 class OrderListSerializer(serializers.ModelSerializer):
     items = OrderItemSerializer(many=True, read_only=True)
     user_email = serializers.SerializerMethodField()
+    amount = serializers.DecimalField(source='total_amount', max_digits=12, decimal_places=2, read_only=True)
 
     class Meta:
         model = Order
@@ -49,6 +52,8 @@ class OrderListSerializer(serializers.ModelSerializer):
             "address",
             "created_at",
             "items",
+            "total_amount",
+            "amount",
         ]
 
     def get_user_email(self, obj):
