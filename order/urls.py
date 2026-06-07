@@ -16,4 +16,8 @@ urlpatterns = [
         "orders/<int:pk>/update-status/",
         OrderStatusUpdateAPIView.as_view()
     ),
+    path(
+        "orders/customer/",
+        CustomerOrderListAPIView.as_view()
+    ),
 ]

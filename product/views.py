@@ -51,20 +51,6 @@ class ProductListAPIView(APIView):
         )
 
 
-# class CategoryWiseProductAPIView(APIView):
-#
-#     def get(self, request, category_slug):
-#
-#         products = Product.objects.filter(
-#             category__slug=category_slug,
-#             is_active=True
-#         ).select_related("category")
-#
-#         serializer = ProductSerializer(products, many=True)
-#
-#         return Response(serializer.data)
-
-
 class ProductDetailAPIView(APIView):
 
     def get(self, request, slug):

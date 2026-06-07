@@ -9,35 +9,6 @@ class OrderItemSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-# class CreateOrderSerializer(serializers.Serializer):
-#     # type = serializers.ChoiceField(choices=["cart", "buy_now"])
-#     #
-#     # cart_id = serializers.IntegerField(required=False)
-#     # product_id = serializers.IntegerField(required=False)
-#     # quantity = serializers.IntegerField(required=False, default=1)
-#     #
-#     # full_name = serializers.CharField()
-#     # phone = serializers.CharField()
-#     # address = serializers.CharField()
-#
-#     TYPE_CHOICES = [
-#         ("cart", "Cart"),
-#         ("buy_now", "Buy Now"),
-#     ]
-#
-#     type = serializers.ChoiceField(choices=TYPE_CHOICES)
-#
-#     cart_id = serializers.IntegerField(required=False, allow_null=True)
-#     product_id = serializers.IntegerField(required=False, allow_null=True)
-#     quantity = serializers.IntegerField(required=False, default=1)
-#
-#     full_name = serializers.CharField()
-#     phone = serializers.CharField()
-#     address = serializers.CharField()
-#     payment_type = serializers.ChoiceField(choices=PaymentMethod.choices)
-
-# serializers.py
-
 class CreateOrderSerializer(serializers.Serializer):
     type = serializers.ChoiceField(
         choices=[("cart", "Cart"), ("buy_now", "Buy Now")]
@@ -63,7 +34,7 @@ class CreateOrderSerializer(serializers.Serializer):
 
 class OrderListSerializer(serializers.ModelSerializer):
     items = OrderItemSerializer(many=True, read_only=True)
-    user_email = serializers.CharField(source="user.email", read_only=True)
+    user_email = serializers.SerializerMethodField()
 
     class Meta:
         model = Order
@@ -79,3 +50,8 @@ class OrderListSerializer(serializers.ModelSerializer):
             "created_at",
             "items",
         ]
+
+    def get_user_email(self, obj):
+        if obj.user:
+            return obj.user.email
+        return None

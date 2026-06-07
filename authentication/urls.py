@@ -10,4 +10,12 @@ urlpatterns = [
         "auth/login/",
         AdminLoginAPIView.as_view()
     ),
+    path(
+        "auth/customer/register/",
+        CustomerRegisterAPIView.as_view()
+    ),
+    path(
+        "auth/customer/login/",
+        CustomerLoginAPIView.as_view()
+    ),
 ]
