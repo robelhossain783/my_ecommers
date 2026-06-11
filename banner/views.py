@@ -126,7 +126,10 @@ class NotificationBannerAPIView(APIView):
 # API for dashboard adminmanagement
 class CreateNotificationBannerAPIView(APIView):
     def post(self, request):
-        serializer = NotificationBannerSerializer(data=request.data)
+        serializer = NotificationBannerSerializer(
+            data=request.data,
+            context={"request": request}
+        )
 
         if serializer.is_valid():
             serializer.save()
@@ -152,11 +155,12 @@ class CreateNotificationBannerAPIView(APIView):
 class NotificationBannerListAPIView(APIView):
 
     def get(self, request):
-        banners = NotificationBanner.objects.all()
+        banners = NotificationBanner.objects.all().order_by("-created_at")
 
         serializer = NotificationBannerSerializer(
             banners,
-            many=True
+            many=True,
+            context={"request": request}
         )
 
         return Response(

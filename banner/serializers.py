@@ -20,14 +20,20 @@ class NotificationBannerSerializer(serializers.ModelSerializer):
             "title",
             "image",
             "target_url",
+            "is_active",
+            "start_date",
+            "end_date",
+            "created_at",
         )
 
     def get_image(self, obj):
-        request = self.context.get("request")
-
         if not obj.image:
             return None
 
-        return request.build_absolute_uri(
-            obj.image.url
-        )
+        request = self.context.get("request")
+
+        if request is not None:
+            return request.build_absolute_uri(obj.image.url)
+
+        # fallback: return relative URL if no request context
+        return obj.image.url
