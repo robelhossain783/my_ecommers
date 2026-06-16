@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, ProductImage
+
+
+class ProductImageInline(admin.TabularInline):
+    model = ProductImage
+    extra = 3
 
 
 @admin.register(Category)
@@ -22,6 +27,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
+
+    inlines = [ProductImageInline]
 
     list_display = [
         "id",

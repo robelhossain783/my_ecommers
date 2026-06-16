@@ -38,4 +38,16 @@ urlpatterns = [
         "products/<int:pk>/delete/",
         ProductDeleteAPIView.as_view()
     ),
+
+    # Gallery
+    path(
+        "products/<int:pk>/gallery/add/",
+        ProductGalleryAddAPIView.as_view(),
+        name="product-gallery-add"
+    ),
+    path(
+        "products/gallery/<int:img_id>/delete/",
+        ProductGalleryDeleteAPIView.as_view(),
+        name="product-gallery-delete"
+    ),
 ]

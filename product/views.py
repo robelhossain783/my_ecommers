@@ -3,8 +3,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from .models import Product, Category
-from .serializers import ProductSerializer, CreateCategorySerializer
+from .models import Product, Category, ProductImage
+from .serializers import ProductSerializer, CreateCategorySerializer, ProductImageSerializer
 from rest_framework.permissions import IsAdminUser
 from .serializers import ProductCreateSerializer
 
@@ -177,3 +177,37 @@ class DeleteCategoryAPIView(APIView):
                 {"error": "Category not found"},
                 status=status.HTTP_404_NOT_FOUND
             )
+
+
+class ProductGalleryAddAPIView(APIView):
+    """Upload one or more gallery images for a product (POST /api/products/<pk>/gallery/add/)"""
+
+    def post(self, request, pk):
+        try:
+            product = Product.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        files = request.FILES.getlist("images")
+        if not files:
+            return Response({"error": "No images provided"}, status=status.HTTP_400_BAD_REQUEST)
+
+        created = []
+        for file in files:
+            img_obj = ProductImage.objects.create(product=product, image=file)
+            created.append(ProductImageSerializer(img_obj).data)
+
+        return Response({"message": "Images uploaded successfully", "images": created}, status=status.HTTP_201_CREATED)
+
+
+class ProductGalleryDeleteAPIView(APIView):
+    """Delete a single gallery image by its ID (DELETE /api/products/gallery/<img_id>/delete/)"""
+
+    def delete(self, request, img_id):
+        try:
+            img_obj = ProductImage.objects.get(pk=img_id)
+        except ProductImage.DoesNotExist:
+            return Response({"error": "Image not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        img_obj.delete()
+        return Response({"message": "Image deleted successfully"}, status=status.HTTP_200_OK)
