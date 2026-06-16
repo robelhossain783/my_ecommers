@@ -3,10 +3,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from .models import Product, Category, ProductImage
-from .serializers import ProductSerializer, CreateCategorySerializer, ProductImageSerializer
+from .models import Product, Category, ProductImage, ProductReview
+from .serializers import ProductSerializer, CreateCategorySerializer, ProductImageSerializer, ProductReviewSerializer, ProductCreateSerializer
 from rest_framework.permissions import IsAdminUser
-from .serializers import ProductCreateSerializer
 
 
 class ProductListAPIView(APIView):
@@ -211,3 +210,26 @@ class ProductGalleryDeleteAPIView(APIView):
 
         img_obj.delete()
         return Response({"message": "Image deleted successfully"}, status=status.HTTP_200_OK)
+
+
+class ProductReviewAddAPIView(APIView):
+    """Add a review for a product (POST /api/products/<pk>/reviews/add/)"""
+
+    def post(self, request, pk):
+        try:
+            product = Product.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = ProductReviewSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save(product=product)
+            return Response(
+                {
+                    "message": "Review added successfully",
+                    "review": serializer.data
+                },
+                status=status.HTTP_201_CREATED
+            )
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

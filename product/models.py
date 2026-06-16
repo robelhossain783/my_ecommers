@@ -67,3 +67,18 @@ class ProductImage(models.Model):
 
     def __str__(self):
         return f"{self.product.name} - Image"
+
+
+class ProductReview(models.Model):
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name="reviews"
+    )
+    name = models.CharField(max_length=120)
+    rating = models.PositiveIntegerField(default=5)
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.product.name} ({self.rating}★)"

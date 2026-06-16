@@ -50,4 +50,11 @@ urlpatterns = [
         ProductGalleryDeleteAPIView.as_view(),
         name="product-gallery-delete"
     ),
+
+    # Reviews
+    path(
+        "products/<int:pk>/reviews/add/",
+        ProductReviewAddAPIView.as_view(),
+        name="product-review-add"
+    ),
 ]

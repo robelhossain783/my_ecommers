@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, Category, ProductImage
+from .models import Product, Category, ProductImage, ProductReview
 
 
 class CreateCategorySerializer(serializers.ModelSerializer):
@@ -29,9 +29,16 @@ class ProductImageSerializer(serializers.ModelSerializer):
         fields = ["id", "image"]
 
 
+class ProductReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductReview
+        fields = ["id", "name", "rating", "comment", "created_at"]
+
+
 class ProductSerializer(serializers.ModelSerializer):
     category = CreateCategorySerializer(read_only=True)
     gallery_images = ProductImageSerializer(many=True, read_only=True)
+    reviews = ProductReviewSerializer(many=True, read_only=True)
 
     class Meta:
         model = Product
