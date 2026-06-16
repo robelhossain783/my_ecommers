@@ -16,6 +16,7 @@ class ProductListAPIView(APIView):
         slug_id = request.query_params.get("slug")
         start_date = request.query_params.get("start_date")
         end_date = request.query_params.get("end_date")
+        is_new_arrivals = request.query_params.get("is_new_arrivals")
         search = request.query_params.get("search")
 
         include_inactive = request.query_params.get("all") == "true"
@@ -42,6 +43,12 @@ class ProductListAPIView(APIView):
                 Q(description__icontains=search)
 
             )
+
+        if is_new_arrivals:
+            is_new_arrivals_bool = is_new_arrivals.lower() == 'true'
+            products = products.filter(is_new_arrivals=is_new_arrivals_bool)
+
+        serializer = ProductSerializer(products, many=True)
 
         serializer = ProductSerializer(products, many=True)
 

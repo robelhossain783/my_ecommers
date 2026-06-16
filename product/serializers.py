@@ -46,4 +46,5 @@ class ProductCreateSerializer(serializers.ModelSerializer):
             "regular_price",
             "stock",
             "is_active",
+            "is_new_arrivals",
         ]

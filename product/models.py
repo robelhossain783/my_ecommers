@@ -46,6 +46,7 @@ class Product(models.Model):
     sell_price = models.DecimalField(max_digits=10, decimal_places=2)
     regular_price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField(default=0)
+    is_new_arrivals = models.BooleanField(default=False, null=True, blank=True)
 
     is_active = models.BooleanField(default=True)
 
