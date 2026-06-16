@@ -18,4 +18,8 @@ urlpatterns = [
         "auth/customer/login/",
         CustomerLoginAPIView.as_view()
     ),
+    path(
+        "auth/profile/<int:user_id>/",
+        CustomerProfileAPIView.as_view()
+    ),
 ]

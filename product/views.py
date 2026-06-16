@@ -75,7 +75,7 @@ class ProductDetailAPIView(APIView):
                 status=status.HTTP_404_NOT_FOUND
             )
 
-        serializer = ProductSerializer(product)
+        serializer = ProductSerializer(product, context={"request": request})
 
         return Response(serializer.data)
 
@@ -221,13 +221,23 @@ class ProductReviewAddAPIView(APIView):
         except Product.DoesNotExist:
             return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = ProductReviewSerializer(data=request.data)
+        serializer = ProductReviewSerializer(data=request.data, context={"request": request})
         if serializer.is_valid():
-            serializer.save(product=product)
+            # Link to user if user_id is provided
+            user_id = request.data.get("user_id")
+            linked_user = None
+            if user_id:
+                from django.contrib.auth.models import User as AuthUser
+                try:
+                    linked_user = AuthUser.objects.get(id=int(user_id))
+                except (AuthUser.DoesNotExist, ValueError, TypeError):
+                    linked_user = None
+
+            review = serializer.save(product=product, user=linked_user)
             return Response(
                 {
                     "message": "Review added successfully",
-                    "review": serializer.data
+                    "review": ProductReviewSerializer(review, context={"request": request}).data
                 },
                 status=status.HTTP_201_CREATED
             )

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -74,6 +75,13 @@ class ProductReview(models.Model):
         Product,
         on_delete=models.CASCADE,
         related_name="reviews"
+    )
+    user = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="product_reviews"
     )
     name = models.CharField(max_length=120)
     rating = models.PositiveIntegerField(default=5)
