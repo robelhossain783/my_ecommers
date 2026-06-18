@@ -50,7 +50,7 @@ class CreateOrderAPIView(APIView):
         user_id = request.data.get("user_id")
         linked_user = None
         if user_id:
-            linked_user = User.objects.filter(id=user_id, is_staff=False).first()
+            linked_user = User.objects.filter(id=user_id).first()
 
         # ================= CREATE ORDER =================
         order = Order.objects.create(
