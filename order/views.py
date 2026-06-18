@@ -46,6 +46,29 @@ class CreateOrderAPIView(APIView):
                 "price": price
             })
 
+        # ================= CART FLOW =================
+        elif order_type == "cart":
+            items = data.get("items", [])
+            if not items:
+                return Response({"message": "No items provided for cart order"}, status=400)
+
+            for item in items:
+                product_id = item["product_id"]
+                quantity = item["quantity"]
+                product = Product.objects.filter(id=product_id).first()
+
+                if not product:
+                    return Response({"message": f"Product with ID {product_id} not found"}, status=400)
+
+                price = float(product.sell_price)
+                total_amount += price * quantity
+
+                order_items_data.append({
+                    "product_id": product.id,
+                    "quantity": quantity,
+                    "price": price
+                })
+
         # ================= LINK USER (optional) =================
         user_id = request.data.get("user_id")
         linked_user = None

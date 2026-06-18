@@ -11,6 +11,11 @@ class OrderItemSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class OrderItemInputSerializer(serializers.Serializer):
+    product_id = serializers.IntegerField()
+    quantity = serializers.IntegerField(default=1)
+
+
 class CreateOrderSerializer(serializers.Serializer):
     type = serializers.ChoiceField(
         choices=[("cart", "Cart"), ("buy_now", "Buy Now")]
@@ -20,6 +25,7 @@ class CreateOrderSerializer(serializers.Serializer):
     product_id = serializers.IntegerField(required=False, allow_null=True)
 
     quantity = serializers.IntegerField(required=False, default=1)
+    items = OrderItemInputSerializer(many=True, required=False)
 
     full_name = serializers.CharField()
     phone = serializers.CharField()
