@@ -237,9 +237,38 @@ class ProductReviewAddAPIView(APIView):
             return Response(
                 {
                     "message": "Review added successfully",
-                    "review": ProductReviewSerializer(review, context={"request": request}).data
+                    "review": ProductReviewAddAPIView.get_review_data(review, request) if hasattr(ProductReviewAddAPIView, 'get_review_data') else ProductReviewSerializer(review, context={"request": request}).data
                 },
                 status=status.HTTP_201_CREATED
             )
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ProductUpdateStockAPIView(APIView):
+    """Update stock level for a product (PATCH /api/products/<pk>/update-stock/)"""
+    authentication_classes = []
+    permission_classes = []
+
+    def patch(self, request, pk):
+        try:
+            product = Product.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        stock_value = request.data.get("stock")
+        if stock_value is None:
+            return Response({"error": "Stock value is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            stock_int = int(stock_value)
+            if stock_int < 0:
+                return Response({"error": "Stock cannot be negative"}, status=status.HTTP_400_BAD_REQUEST)
+            product.stock = stock_int
+            product.save()
+            return Response({
+                "message": "Stock updated successfully",
+                "stock": product.stock
+            }, status=status.HTTP_200_OK)
+        except (ValueError, TypeError):
+            return Response({"error": "Invalid stock value"}, status=status.HTTP_400_BAD_REQUEST)

@@ -1,3 +1,4 @@
+from django.db import transaction
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -141,28 +142,95 @@ class OrderListAPIView(APIView):
         )
 
 
+# class OrderStatusUpdateAPIView(APIView):
+#     def post(self, request, pk):
+#         try:
+#             order = Order.objects.get(pk=pk)
+#         except Order.DoesNotExist:
+#             return Response({"error": "Order not found"}, status=status.HTTP_404_NOT_FOUND)
+#
+#         new_status = request.data.get("status")
+#         if not new_status:
+#             return Response({"error": "status field is required"}, status=status.HTTP_400_BAD_REQUEST)
+#
+#         valid_statuses = [choice[0] for choice in Order.STATUS_CHOICES]
+#         if new_status not in valid_statuses:
+#             return Response({"error": f"Invalid status. Choose from: {valid_statuses}"}, status=status.HTTP_400_BAD_REQUEST)
+#
+#         order.status = new_status
+#         order.save()
+#         return Response({
+#             "message": "Order status updated successfully",
+#             "order_id": order.id,
+#             "status": order.status
+#         }, status=status.HTTP_200_OK)
+
 class OrderStatusUpdateAPIView(APIView):
     def post(self, request, pk):
         try:
             order = Order.objects.get(pk=pk)
         except Order.DoesNotExist:
-            return Response({"error": "Order not found"}, status=status.HTTP_404_NOT_FOUND)
-        
+            return Response(
+                {"error": "Order not found"},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
         new_status = request.data.get("status")
+
         if not new_status:
-            return Response({"error": "status field is required"}, status=status.HTTP_400_BAD_REQUEST)
-            
+            return Response(
+                {"error": "status field is required"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
         valid_statuses = [choice[0] for choice in Order.STATUS_CHOICES]
+
         if new_status not in valid_statuses:
-            return Response({"error": f"Invalid status. Choose from: {valid_statuses}"}, status=status.HTTP_400_BAD_REQUEST)
-            
-        order.status = new_status
-        order.save()
-        return Response({
-            "message": "Order status updated successfully",
-            "order_id": order.id,
-            "status": order.status
-        }, status=status.HTTP_200_OK)
+            return Response(
+                {"error": f"Invalid status. Choose from: {valid_statuses}"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        with transaction.atomic():
+
+            # stock কমবে শুধুমাত্র প্রথমবার completed হলে
+            if (
+                new_status == "completed"
+                and order.status != "completed"
+            ):
+                for item in order.items.select_related("product"):
+
+                    product = item.product
+
+                    if item.quantity > product.stock:
+                        return Response(
+                            {
+                                "error": (
+                                    f"{product.name} stock insufficient. "
+                                    f"Available: {product.stock}, "
+                                    f"Requested: {item.quantity}"
+                                )
+                            },
+                            status=status.HTTP_400_BAD_REQUEST
+                        )
+
+                    product.stock = max(
+                        0,
+                        product.stock - item.quantity
+                    )
+                    product.save(update_fields=["stock"])
+
+            order.status = new_status
+            order.save(update_fields=["status"])
+
+        return Response(
+            {
+                "message": "Order status updated successfully",
+                "order_id": order.id,
+                "status": order.status
+            },
+            status=status.HTTP_200_OK
+        )
 
 
 class CustomerOrderListAPIView(APIView):

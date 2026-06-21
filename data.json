@@ -3,37 +3,37 @@
   "model": "admin.logentry",
   "pk": 1,
   "fields": {
-    "action_time": "2026-05-20T13:41:12.093Z",
+    "action_time": "2026-06-01T09:17:24.675Z",
     "user": 1,
-    "content_type": 7,
-    "object_id": "1",
-    "object_repr": "Gadget",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "Order-9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 2,
   "fields": {
-    "action_time": "2026-05-20T13:43:21.197Z",
+    "action_time": "2026-06-02T07:00:00.654Z",
     "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "Realme Wireless %5ANC",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Honey",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 3,
   "fields": {
-    "action_time": "2026-05-20T13:43:34.294Z",
+    "action_time": "2026-06-02T07:00:13.199Z",
     "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "Realme Wireless %5ANC",
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Fasion",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
   }
@@ -42,513 +42,172 @@
   "model": "admin.logentry",
   "pk": 4,
   "fields": {
-    "action_time": "2026-05-20T13:43:44.591Z",
+    "action_time": "2026-06-02T07:00:24.107Z",
     "user": 1,
-    "content_type": 8,
+    "content_type": 7,
     "object_id": "1",
-    "object_repr": "Realme Wireless 5ANC",
+    "object_repr": "Gadget",
     "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 5,
   "fields": {
-    "action_time": "2026-05-20T16:17:12.258Z",
+    "action_time": "2026-06-02T08:55:12.712Z",
     "user": 1,
-    "content_type": 8,
+    "content_type": 7,
     "object_id": "2",
-    "object_repr": "Wallet Mini",
+    "object_repr": "Bakeware",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-06-02T09:45:40.113Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Wallets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-06-02T09:48:16.156Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Kids Zone",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-06-07T09:35:13.087Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "rubel.defy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-06-10T07:14:07.946Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Summer Campain",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
 },
 {
   "model": "admin.logentry",
-  "pk": 6,
-  "fields": {
-    "action_time": "2026-05-21T15:55:45.640Z",
-    "user": 1,
-    "content_type": 7,
-    "object_id": "2",
-    "object_repr": "Wallet",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 7,
-  "fields": {
-    "action_time": "2026-05-21T15:55:54.161Z",
-    "user": 1,
-    "content_type": 7,
-    "object_id": "3",
-    "object_repr": "Airpods",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 8,
-  "fields": {
-    "action_time": "2026-05-21T15:56:00.988Z",
-    "user": 1,
-    "content_type": 7,
-    "object_id": "4",
-    "object_repr": "Speakers",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 1,
-  "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 2,
-  "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 3,
-  "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 4,
-  "fields": {
-    "name": "Can view log entry",
-    "content_type": 1,
-    "codename": "view_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 5,
-  "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 6,
-  "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 7,
-  "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 8,
-  "fields": {
-    "name": "Can view permission",
-    "content_type": 2,
-    "codename": "view_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 9,
-  "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
-  }
-},
-{
-  "model": "auth.permission",
   "pk": 10,
   "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
+    "action_time": "2026-06-10T09:24:31.925Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Summer Campain",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
+  "model": "admin.logentry",
   "pk": 11,
   "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
+    "action_time": "2026-06-10T09:25:30.158Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Summer Sale",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
   }
 },
 {
-  "model": "auth.permission",
+  "model": "admin.logentry",
   "pk": 12,
   "fields": {
-    "name": "Can view group",
-    "content_type": 3,
-    "codename": "view_group"
+    "action_time": "2026-06-10T09:35:06.407Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Ghee",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Image\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
+  "model": "admin.logentry",
   "pk": 13,
   "fields": {
-    "name": "Can add user",
-    "content_type": 4,
-    "codename": "add_user"
+    "action_time": "2026-06-10T10:59:05.701Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "4",
+    "object_repr": "Hi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\", \"Is active\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
+  "model": "admin.logentry",
   "pk": 14,
   "fields": {
-    "name": "Can change user",
-    "content_type": 4,
-    "codename": "change_user"
+    "action_time": "2026-06-10T10:59:27.364Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Hello",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\", \"Is active\"]}}]"
   }
 },
 {
-  "model": "auth.permission",
+  "model": "admin.logentry",
   "pk": 15,
   "fields": {
-    "name": "Can delete user",
-    "content_type": 4,
-    "codename": "delete_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 16,
-  "fields": {
-    "name": "Can view user",
-    "content_type": 4,
-    "codename": "view_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 17,
-  "fields": {
-    "name": "Can add content type",
-    "content_type": 5,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 5,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 5,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can view content type",
-    "content_type": 5,
-    "codename": "view_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 6,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 6,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 6,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can view session",
-    "content_type": 6,
-    "codename": "view_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add category",
-    "content_type": 7,
-    "codename": "add_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change category",
-    "content_type": 7,
-    "codename": "change_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete category",
-    "content_type": 7,
-    "codename": "delete_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can view category",
-    "content_type": 7,
-    "codename": "view_category"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can add product",
-    "content_type": 8,
-    "codename": "add_product"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can change product",
-    "content_type": 8,
-    "codename": "change_product"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 31,
-  "fields": {
-    "name": "Can delete product",
-    "content_type": 8,
-    "codename": "delete_product"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 32,
-  "fields": {
-    "name": "Can view product",
-    "content_type": 8,
-    "codename": "view_product"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 33,
-  "fields": {
-    "name": "Can add cart",
-    "content_type": 9,
-    "codename": "add_cart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 34,
-  "fields": {
-    "name": "Can change cart",
-    "content_type": 9,
-    "codename": "change_cart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 35,
-  "fields": {
-    "name": "Can delete cart",
-    "content_type": 9,
-    "codename": "delete_cart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 36,
-  "fields": {
-    "name": "Can view cart",
-    "content_type": 9,
-    "codename": "view_cart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 37,
-  "fields": {
-    "name": "Can add cart item",
-    "content_type": 10,
-    "codename": "add_cartitem"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 38,
-  "fields": {
-    "name": "Can change cart item",
-    "content_type": 10,
-    "codename": "change_cartitem"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 39,
-  "fields": {
-    "name": "Can delete cart item",
-    "content_type": 10,
-    "codename": "delete_cartitem"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 40,
-  "fields": {
-    "name": "Can view cart item",
-    "content_type": 10,
-    "codename": "view_cartitem"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 41,
-  "fields": {
-    "name": "Can add order",
-    "content_type": 11,
-    "codename": "add_order"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 42,
-  "fields": {
-    "name": "Can change order",
-    "content_type": 11,
-    "codename": "change_order"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 43,
-  "fields": {
-    "name": "Can delete order",
-    "content_type": 11,
-    "codename": "delete_order"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 44,
-  "fields": {
-    "name": "Can view order",
-    "content_type": 11,
-    "codename": "view_order"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 45,
-  "fields": {
-    "name": "Can add order item",
-    "content_type": 12,
-    "codename": "add_orderitem"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 46,
-  "fields": {
-    "name": "Can change order item",
-    "content_type": 12,
-    "codename": "change_orderitem"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 47,
-  "fields": {
-    "name": "Can delete order item",
-    "content_type": 12,
-    "codename": "delete_orderitem"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 48,
-  "fields": {
-    "name": "Can view order item",
-    "content_type": 12,
-    "codename": "view_orderitem"
+    "action_time": "2026-06-11T05:56:30.695Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "6",
+    "object_repr": "Deshi Aam",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
   }
 },
 {
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$1000000$DtoUjEI1NLXAAGzjLkwISw$pB3/c9jGEFPIFSKZKPTwZ6O/wjZJr2Yo/S/opvCHSuc=",
-    "last_login": "2026-05-21T18:29:06.077Z",
+    "password": "pbkdf2_sha256$1000000$AmCLDQMMQlgejm8dG4GRdo$QDA1072BE2GlUUGrdDUrkG1iaQ9j7EY4i/iOazPdcTQ=",
+    "last_login": "2026-06-10T07:07:16.524Z",
     "is_superuser": true,
     "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
+    "first_name": "Rubel",
+    "last_name": "Ahmed",
+    "email": "robelhossain783@gmail.com",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2026-05-20T13:39:30.499Z",
+    "date_joined": "2026-05-20T11:11:00.074Z",
     "groups": [],
     "user_permissions": []
   }
@@ -557,122 +216,142 @@
   "model": "auth.user",
   "pk": 2,
   "fields": {
-    "password": "pbkdf2_sha256$1000000$DogOF3pjtwV5i0FxIXw0Nk$nEPODKRiz45jJBrTYH60nppGDrff1OT36mjJprpbP+U=",
+    "password": "pbkdf2_sha256$1000000$qz0OmAcepG84QkdFFkIqlM$J6TH3Z/qwXOMQo8iZexrYCVJ7y3AalGxX0D2MJ9pcho=",
     "last_login": null,
-    "is_superuser": true,
-    "username": "admin2",
+    "is_superuser": false,
+    "username": "testadmin",
     "first_name": "",
     "last_name": "",
     "email": "",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2026-05-21T18:25:16.907Z",
+    "date_joined": "2026-06-01T08:15:31.425Z",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "contenttypes.contenttype",
-  "pk": 1,
-  "fields": {
-    "app_label": "admin",
-    "model": "logentry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 2,
-  "fields": {
-    "app_label": "auth",
-    "model": "permission"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
+  "model": "auth.user",
   "pk": 3,
   "fields": {
-    "app_label": "auth",
-    "model": "group"
+    "password": "pbkdf2_sha256$1000000$O2odlOcw632Yjf46mMFmkM$FpGXJhNZ3YBMj7lGnSer/h1PNMnDx7hv+F2ToOsIOWo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rubel.defy",
+    "first_name": "",
+    "last_name": "",
+    "email": "rubel.defy2@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-01T08:25:48.432Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "contenttypes.contenttype",
+  "model": "auth.user",
   "pk": 4,
   "fields": {
-    "app_label": "auth",
-    "model": "user"
+    "password": "pbkdf2_sha256$1000000$4buvojXHRdibZopzs56LGs$4hfyMpOGntffwhN9VdvMr3xCTsQXlKaz8YlttaeSpFk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sadia",
+    "first_name": "Sadia",
+    "last_name": "Islam",
+    "email": "sadiaislamshampa@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-07T06:44:20.031Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "contenttypes.contenttype",
+  "model": "auth.user",
   "pk": 5,
   "fields": {
-    "app_label": "contenttypes",
-    "model": "contenttype"
+    "password": "pbkdf2_sha256$1000000$cJlSnol0OBHc0dWF6uN9yR$SxevxQLZ6eUd41CcIDIjWjeUMZsvySG6/ZAM64rkxxc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "robel.defy3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-07T06:46:20.248Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "contenttypes.contenttype",
+  "model": "auth.user",
   "pk": 6,
   "fields": {
-    "app_label": "sessions",
-    "model": "session"
+    "password": "pbkdf2_sha256$1000000$cXn81HTCqI8z1WiIMGv1vX$wFLowHBcZSCwoeZf9dSLTmtQ0JDssJhESL43jheA2dY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "shompo",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-07T09:54:50.831Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "contenttypes.contenttype",
+  "model": "auth.user",
   "pk": 7,
   "fields": {
-    "app_label": "product",
-    "model": "category"
+    "password": "pbkdf2_sha256$1000000$cpBDZfDVM8lepSbMCdLgEV$GCIlocG5UTKvUyx9z5bkQ4N5GqUDb7K8mNhvJghK6fg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "profileuser123",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "profiletest@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-16T10:39:06.862Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "contenttypes.contenttype",
+  "model": "auth.user",
   "pk": 8,
   "fields": {
-    "app_label": "product",
-    "model": "product"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
-    "app_label": "cart",
-    "model": "cart"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 10,
-  "fields": {
-    "app_label": "cart",
-    "model": "cartitem"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "order",
-    "model": "order"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "order",
-    "model": "orderitem"
+    "password": "pbkdf2_sha256$1000000$ebQw98yJJlw2H8AjZTrGUj$sDHrdS5gVPIR4wEUi5qyP4WWTTKJWWd87XE5BdmOcvU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sadia_islam",
+    "first_name": "Sadia",
+    "last_name": "Islam Shampa",
+    "email": "sadia@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-18T06:30:40.428Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
   "model": "sessions.session",
-  "pk": "feftdd1nf9ml0v7xllir2q687my0szqh",
+  "pk": "dng1xu7if106fq7xyiripfyf0135zbhs",
   "fields": {
-    "session_data": ".eJxVjE0OwiAYRO_C2hBooYJL956h-f6QqoGktCvj3W2TLnQ3mfdm3mqEdcnj2mQeJ1YXZdXpt0Ogp5Qd8APKvWqqZZkn1LuiD9r0rbK8rof7d5Ch5W3tsXMQ0XYh2UBsJRg2nBiDEX8mNGIjAaQBDSbvXT8IRce2T2aLjtXnCwACOLE:1wQ88o:sQmSP1yN29JHZ_pKB5rV20wSXAxLnPL7n-5NRSrlaRo",
-    "expire_date": "2026-06-04T18:29:06.087Z"
+    "session_data": ".eJxVjDEOwjAMRe-SGUVxmjY2I3vPUMWxRQqolZp2QtwdReoA63_v_beZ0rGX6ai6TbOYqwFz-d045acuDcgjLffV5nXZt5ltU-xJqx1X0dftdP8OSqql1RnVB0XCQH5QwSEmB0oAmDIH75iJhHvfk3TcaVCO5DADDJ0TiObzBd9IN30:1wXD1w:e8AV5-IvMxxmLMGejByEjd3cx9cl3usDlEl5c7gdQ0o",
+    "expire_date": "2026-06-24T07:07:16.529Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x36oa4kslob2757rb8gih143wri1u28h",
+  "fields": {
+    "session_data": ".eJxVjDEOwjAMRe-SGUVxmjY2I3vPUMWxRQqolZp2QtwdReoA63_v_beZ0rGX6ai6TbOYqwFz-d045acuDcgjLffV5nXZt5ltU-xJqx1X0dftdP8OSqql1RnVB0XCQH5QwSEmB0oAmDIH75iJhHvfk3TcaVCO5DADDJ0TiObzBd9IN30:1wW9uT:q-vLjcR2eaxCwujZyHvPSKYBFEg_wtzcRqHGufa6W3E",
+    "expire_date": "2026-06-21T09:35:13.101Z"
   }
 },
 {
@@ -681,58 +360,53 @@
   "fields": {
     "name": "Gadget",
     "slug": "gadget",
-    "image": "",
+    "image": "media/categories/gadget_pc3j47",
     "is_active": true,
-    "created_at": "2026-05-20T13:41:12.092Z"
+    "created_at": "2026-05-20T11:16:44.756Z"
   }
 },
 {
   "model": "product.category",
   "pk": 2,
   "fields": {
-    "name": "Wallet",
-    "slug": "wallet",
-    "image": "",
+    "name": "Bakeware",
+    "slug": "bakeware",
+    "image": "media/categories/cupcake_tllnfr",
     "is_active": true,
-    "created_at": "2026-05-21T15:54:19.335Z"
+    "created_at": "2026-05-21T07:47:49.859Z"
   }
 },
 {
   "model": "product.category",
   "pk": 3,
   "fields": {
-    "name": "Airpods",
-    "slug": "airpods",
-    "image": "",
+    "name": "Fasion",
+    "slug": "fasion",
+    "image": "media/categories/shoping_kk6wdv",
     "is_active": true,
-    "created_at": "2026-05-21T15:54:36.805Z"
+    "created_at": "2026-05-21T11:28:56.860Z"
   }
 },
 {
   "model": "product.category",
-  "pk": 4,
+  "pk": 5,
   "fields": {
-    "name": "Speakers",
-    "slug": "speakers",
-    "image": "",
+    "name": "Kids Zone",
+    "slug": "kids-zone",
+    "image": "media/categories/kidsitems_vlmoky",
     "is_active": true,
-    "created_at": "2026-05-21T15:55:16.164Z"
+    "created_at": "2026-06-01T09:05:27.835Z"
   }
 },
 {
-  "model": "product.product",
-  "pk": 1,
+  "model": "product.category",
+  "pk": 6,
   "fields": {
-    "category": 1,
-    "name": "Realme Wireless 5ANC",
-    "slug": "realme-wireless-5anc",
-    "image": "products/realme_wireless.webp",
-    "description": "Wirelest device",
-    "sell_price": "2000.00",
-    "regular_price": "2480.00",
-    "stock": 5,
+    "name": "Wallets",
+    "slug": "wallets",
+    "image": "media/categories/wallet_iknxf1",
     "is_active": true,
-    "created_at": "2026-05-20T13:43:21.196Z"
+    "created_at": "2026-06-01T09:05:52.463Z"
   }
 },
 {
@@ -740,79 +414,233 @@
   "pk": 2,
   "fields": {
     "category": 1,
-    "name": "Wallet Mini",
-    "slug": "wallet-mini",
-    "image": "products/martin-martz-U3SJ5SMLOPE-unsplash.jpg",
-    "description": "dgffrgh",
-    "sell_price": "900.00",
-    "regular_price": "1400.00",
-    "stock": 10,
-    "is_active": true,
-    "created_at": "2026-05-20T16:17:12.257Z"
-  }
-},
-{
-  "model": "product.product",
-  "pk": 3,
-  "fields": {
-    "category": 3,
-    "name": "Xiaomi Redmi Buds 5",
-    "slug": "xiaomi-redmi-buds-5",
-    "image": "products/redmi-buds-5-black-500x500.webp",
-    "description": "Redmi Buds 5 is an excellent addition to the category of truly wireless earbuds. These TWS earbuds have the most recent Bluetooth V5.3 chip, ensuring a stable and efficient wireless connection with your devices.",
+    "name": "Hoco ES64 Sports Bluetooth Wireless Neckband Earphone",
+    "slug": "hoco-wireless-ES64",
+    "image": "products/hoko_neckband.webp",
+    "description": "Original Neckband",
     "sell_price": "1390.00",
-    "regular_price": "1450.00",
-    "stock": 10,
+    "regular_price": "1850.00",
+    "stock": 13,
+    "is_new_arrivals": false,
     "is_active": true,
-    "created_at": "2026-05-21T15:59:45.233Z"
+    "created_at": "2026-05-21T05:04:11.557Z"
   }
 },
 {
   "model": "product.product",
-  "pk": 4,
+  "pk": 3,
   "fields": {
-    "category": 3,
-    "name": "Awei T29 Pro Gaming Earbuds",
-    "slug": "awei-t29-pro-gaming-earbuds",
-    "image": "products/awei-t29-pro-01-500x500.webp",
-    "description": "The Awei T29 Pro Gaming Earbuds are an advanced audio solution for gamers, providing greater sound quality and comfort throughout long gaming sessions. With an IPX6 waterproof rating, these Earbuds have brilliant RGB illumination in seven colors and are designed to survive hard gameplay.",
-    "sell_price": "1290.00",
-    "regular_price": "1400.00",
-    "stock": 8,
+    "category": 1,
+    "name": "Zeblaze Btalk 3 Plus",
+    "slug": "beblaze_btalk",
+    "image": "products/btalk-3-plus.webp",
+    "description": "Original Smart Watch",
+    "sell_price": "2350.00",
+    "regular_price": "2990.00",
+    "stock": 13,
+    "is_new_arrivals": false,
     "is_active": true,
-    "created_at": "2026-05-21T16:01:37.305Z"
+    "created_at": "2026-05-21T05:06:38.341Z"
   }
 },
 {
   "model": "product.product",
   "pk": 5,
   "fields": {
-    "category": 4,
+    "category": 1,
     "name": "Xtrike Me SK-301 RGB Gaming Bluetooth Speaker",
-    "slug": "xtrike-me-sk-301-rgb-gaming-bluetooth-speaker",
-    "image": "products/sk-301-black-03-500x500.webp",
-    "description": "",
-    "sell_price": "1580.00",
-    "regular_price": "1970.00",
-    "stock": 5,
+    "slug": "xtrike_SK-301",
+    "image": "products/Xtrike-sk-301-black.webp",
+    "description": "Original Bluetooth Speaker",
+    "sell_price": "1350.00",
+    "regular_price": "1485.00",
+    "stock": 13,
+    "is_new_arrivals": false,
     "is_active": true,
-    "created_at": "2026-05-21T16:02:45.743Z"
+    "created_at": "2026-05-21T05:11:49.695Z"
   }
 },
 {
   "model": "product.product",
   "pk": 6,
   "fields": {
-    "category": 2,
-    "name": "Tedd Magnet Trifold Wallet v2 – Black",
-    "slug": "tedd-magnet-trifold-wallet-v2-black",
-    "image": "products/walltes_uks.jpg",
-    "description": "100% Premium Genuine Leather\r\nসফট ফিল, টেকসই এবং দীর্ঘস্থায়ী ব্যবহার নিশ্চিত করে",
-    "sell_price": "950.00",
-    "regular_price": "1080.00",
-    "stock": 16,
+    "category": 1,
+    "name": "Imilab IMIKI SP1",
+    "slug": "imilab_imiki_sp1",
+    "image": "products/imilab-sp1.webp",
+    "description": "Original Imilab Earbuds",
+    "sell_price": "1490.00",
+    "regular_price": "1635.00",
+    "stock": 13,
+    "is_new_arrivals": false,
     "is_active": true,
-    "created_at": "2026-05-21T16:04:37.188Z"
+    "created_at": "2026-05-21T05:15:41.995Z"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 7,
+  "fields": {
+    "category": 2,
+    "name": "Assorted flavor cake 500 gm",
+    "slug": "assorted_cake_500",
+    "image": "products/cake-500.webp",
+    "description": "Home Made",
+    "sell_price": "1200.00",
+    "regular_price": "1350.00",
+    "stock": 20,
+    "is_new_arrivals": false,
+    "is_active": true,
+    "created_at": "2026-05-21T07:51:12.113Z"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "name": "Mithai Silver Box",
+    "slug": "mithai-silver-box",
+    "image": "products/mithai-silver-box.webp",
+    "description": "Mithai",
+    "sell_price": "450.00",
+    "regular_price": "580.00",
+    "stock": 30,
+    "is_new_arrivals": false,
+    "is_active": true,
+    "created_at": "2026-05-21T11:31:42.648Z"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 10,
+  "fields": {
+    "category": 6,
+    "name": "Redmi Note 13",
+    "slug": "redmi-note-13",
+    "image": "media/products/Redmi-15Ca-9069_p2iak9",
+    "description": "Xiaomi",
+    "sell_price": "24000.00",
+    "regular_price": "25000.00",
+    "stock": 12,
+    "is_new_arrivals": false,
+    "is_active": true,
+    "created_at": "2026-06-01T09:07:59.246Z"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "name": "Imilab KW66",
+    "slug": "imilab-kw66",
+    "image": "media/products/imilab_kw66_vzocoi",
+    "description": "IMILAB KW66 Smart Watch",
+    "sell_price": "2980.00",
+    "regular_price": "3199.00",
+    "stock": 20,
+    "is_new_arrivals": true,
+    "is_active": true,
+    "created_at": "2026-06-15T10:59:42.249Z"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 12,
+  "fields": {
+    "category": 2,
+    "name": "Safawi/kalmi Dates (A Grade) 1kg",
+    "slug": "safawi-kalmi-dates-a-grade-1kg",
+    "image": "media/products/khjur_1_byh7yg",
+    "description": "Safawi/kalmi Dates (A Grade) 1kg",
+    "sell_price": "1300.00",
+    "regular_price": "1570.00",
+    "stock": 89,
+    "is_new_arrivals": true,
+    "is_active": true,
+    "created_at": "2026-06-16T06:26:37.343Z"
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 12,
+    "image": "media/products/gallery/khejur_2_lap63g",
+    "created_at": "2026-06-16T06:26:38.123Z"
+  }
+},
+{
+  "model": "product.productreview",
+  "pk": 1,
+  "fields": {
+    "product": 12,
+    "user": null,
+    "name": "ABir",
+    "rating": 5,
+    "comment": "Good product",
+    "created_at": "2026-06-16T10:05:19.859Z"
+  }
+},
+{
+  "model": "product.productreview",
+  "pk": 2,
+  "fields": {
+    "product": 11,
+    "user": null,
+    "name": "admin",
+    "rating": 4,
+    "comment": "Good Product",
+    "created_at": "2026-06-16T10:13:21.058Z"
+  }
+},
+{
+  "model": "product.productreview",
+  "pk": 3,
+  "fields": {
+    "product": 11,
+    "user": null,
+    "name": "Rubel Ahmed",
+    "rating": 4,
+    "comment": "valo product",
+    "created_at": "2026-06-16T10:49:55.117Z"
+  }
+},
+{
+  "model": "product.productreview",
+  "pk": 4,
+  "fields": {
+    "product": 11,
+    "user": null,
+    "name": "Rubel Ahmed",
+    "rating": 5,
+    "comment": "Goood",
+    "created_at": "2026-06-16T10:56:56.225Z"
+  }
+},
+{
+  "model": "product.productreview",
+  "pk": 5,
+  "fields": {
+    "product": 12,
+    "user": null,
+    "name": "Rubel Ahmed",
+    "rating": 5,
+    "comment": "Hello",
+    "created_at": "2026-06-16T10:58:42.237Z"
+  }
+},
+{
+  "model": "product.productreview",
+  "pk": 6,
+  "fields": {
+    "product": 11,
+    "user": 1,
+    "name": "Rubel Ahmed",
+    "rating": 5,
+    "comment": "ere",
+    "created_at": "2026-06-16T11:02:35.874Z"
   }
 },
 {
@@ -820,14 +648,14 @@
   "pk": 1,
   "fields": {
     "user": null,
-    "customer_id": "b6907b40-c796-4fb1-b038-bf5d47793ec9",
+    "customer_id": "d7741a51-6b65-46b2-aaa9-bb5f31c20102",
     "payment_type": "COD",
-    "full_name": "Abir Hasan",
-    "phone": "01309875674",
-    "address": "Savar Namabazar, Dhaka, Dhaka",
-    "total_amount": "900.00",
+    "full_name": "Mr x",
+    "phone": "01303860286",
+    "address": "Dhamrai Dhaka, Dhaka",
+    "total_amount": "2350.00",
     "status": "pending",
-    "created_at": "2026-05-21T14:22:23.677Z"
+    "created_at": "2026-05-21T07:37:39.923Z"
   }
 },
 {
@@ -835,14 +663,14 @@
   "pk": 2,
   "fields": {
     "user": null,
-    "customer_id": "1cf30e83-55d3-4b84-810f-8653a0b14932",
-    "payment_type": "NAGAD",
-    "full_name": "Azizul Islam",
-    "phone": "01978654398",
-    "address": "Dhamrai, Dhaka, Dhaka",
-    "total_amount": "2000.00",
+    "customer_id": "fd2ec79c-8e1f-4c8b-943d-5829aa3c6d92",
+    "payment_type": "COD",
+    "full_name": "Zakir Khan",
+    "phone": "01890786543",
+    "address": "gazir hat, Barishal, Dhaka",
+    "total_amount": "3500.00",
     "status": "pending",
-    "created_at": "2026-05-21T14:23:27.696Z"
+    "created_at": "2026-05-21T07:41:24.728Z"
   }
 },
 {
@@ -850,14 +678,14 @@
   "pk": 3,
   "fields": {
     "user": null,
-    "customer_id": "bbdbc09a-7aff-409d-8f2a-798b177021e7",
+    "customer_id": "1d0a137a-517c-4ae6-90bf-1e0ea1ab554c",
     "payment_type": "COD",
-    "full_name": "Nabil Hasan",
-    "phone": "01498763798",
-    "address": "Savar, Ahulia, Dhaka, Dhaka",
-    "total_amount": "1580.00",
+    "full_name": "Mohammad Shakib",
+    "phone": "01409873679",
+    "address": "Kaila , Board Bazar, Mymensingh, Mymensingh",
+    "total_amount": "1200.00",
     "status": "pending",
-    "created_at": "2026-05-21T16:05:54.325Z"
+    "created_at": "2026-05-21T07:54:47.562Z"
   }
 },
 {
@@ -865,14 +693,449 @@
   "pk": 4,
   "fields": {
     "user": null,
-    "customer_id": "09f73eb1-d1d5-4337-b321-808ebc2f66af",
-    "payment_type": "NAGAD",
-    "full_name": "Sumon Khan",
-    "phone": "01487967726",
-    "address": "Dhamrai, Dhaka, Dhaka",
-    "total_amount": "950.00",
+    "customer_id": "10b02be7-12a4-4b97-8d47-4d38ad032305",
+    "payment_type": "COD",
+    "full_name": "Touhid",
+    "phone": "01394785748",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "2350.00",
     "status": "pending",
-    "created_at": "2026-05-21T16:06:52.441Z"
+    "created_at": "2026-05-21T09:15:43.360Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 5,
+  "fields": {
+    "user": null,
+    "customer_id": "7da01945-98a0-4ea7-a4ee-2afd256e95ee",
+    "payment_type": "COD",
+    "full_name": "Noyon Khan",
+    "phone": "01409778364",
+    "address": "savar, Dhaka",
+    "total_amount": "1390.00",
+    "status": "pending",
+    "created_at": "2026-05-21T09:48:50.962Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 6,
+  "fields": {
+    "user": null,
+    "customer_id": "2e031750-f783-4dab-84ef-a18812c5f5e1",
+    "payment_type": "BKASH",
+    "full_name": "Anal",
+    "phone": "01928474883",
+    "address": "Dhanmondi, Dhaka",
+    "total_amount": "1490.00",
+    "status": "completed",
+    "created_at": "2026-05-21T09:54:24.360Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 7,
+  "fields": {
+    "user": null,
+    "customer_id": "d55ee036-2bc5-4810-9199-ec1f519d6a98",
+    "payment_type": "NAGAD",
+    "full_name": "fdf",
+    "phone": "01389898983",
+    "address": "fdf, Dhaka",
+    "total_amount": "2350.00",
+    "status": "completed",
+    "created_at": "2026-05-21T10:23:39.758Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 8,
+  "fields": {
+    "user": null,
+    "customer_id": "18b0cc11-2583-4951-b66b-5262b018d92a",
+    "payment_type": "NAGAD",
+    "full_name": "Jamil",
+    "phone": "01701986754",
+    "address": "Patuakhali, Dhaka",
+    "total_amount": "1390.00",
+    "status": "completed",
+    "created_at": "2026-05-21T11:04:37.486Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 9,
+  "fields": {
+    "user": null,
+    "customer_id": "cdd409ab-4627-4bce-898f-ade49a42a547",
+    "payment_type": "COD",
+    "full_name": "Touhid",
+    "phone": "01303876452",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "24000.00",
+    "status": "completed",
+    "created_at": "2026-06-01T09:09:01.540Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 10,
+  "fields": {
+    "user": 4,
+    "customer_id": "ea438956-cc18-4d3b-9390-a264cce830fe",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01635275630",
+    "address": "Kabirpur, Savar, Dhaka, Dhaka",
+    "total_amount": "24000.00",
+    "status": "completed",
+    "created_at": "2026-06-07T06:45:26.292Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 11,
+  "fields": {
+    "user": null,
+    "customer_id": "c3c3da25-f772-4c22-931a-403d4abb09cc",
+    "payment_type": "COD",
+    "full_name": "Mr. X",
+    "phone": "01303878675",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "2350.00",
+    "status": "pending",
+    "created_at": "2026-06-07T10:30:01.706Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 12,
+  "fields": {
+    "user": 4,
+    "customer_id": "a088428a-2023-40b0-984c-3200583fa725",
+    "payment_type": "COD",
+    "full_name": "Sad",
+    "phone": "01303987654",
+    "address": "Dhamrai, Dhaka",
+    "total_amount": "450.00",
+    "status": "pending",
+    "created_at": "2026-06-08T09:33:34.899Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 13,
+  "fields": {
+    "user": null,
+    "customer_id": "d68f314c-92cc-4c91-8bd1-16061523f266",
+    "payment_type": "COD",
+    "full_name": "Admin",
+    "phone": "01303750298",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "24000.00",
+    "status": "pending",
+    "created_at": "2026-06-08T10:22:22.039Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 14,
+  "fields": {
+    "user": null,
+    "customer_id": "cf0d1a6f-b82c-4578-8047-6b60eb540fa4",
+    "payment_type": "COD",
+    "full_name": "R",
+    "phone": "01303879865",
+    "address": "sf, Dhaka",
+    "total_amount": "1350.00",
+    "status": "pending",
+    "created_at": "2026-06-08T10:35:26.172Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 15,
+  "fields": {
+    "user": null,
+    "customer_id": "c76a2287-8ead-4ac5-b725-58f46f802c5c",
+    "payment_type": "COD",
+    "full_name": "rt",
+    "phone": "01303987654",
+    "address": "d, Dhaka",
+    "total_amount": "24000.00",
+    "status": "pending",
+    "created_at": "2026-06-08T10:37:24.854Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 16,
+  "fields": {
+    "user": null,
+    "customer_id": "8462e5ee-9dc3-4901-b09a-0e0c12ee4ae8",
+    "payment_type": "COD",
+    "full_name": "Mr F",
+    "phone": "01303750286",
+    "address": "Dhamrai, Dhaka",
+    "total_amount": "2980.00",
+    "status": "processing",
+    "created_at": "2026-06-17T09:35:23.300Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 17,
+  "fields": {
+    "user": null,
+    "customer_id": "17c6b4dd-5b86-4b6d-bf9d-e1157a7ffca3",
+    "payment_type": "COD",
+    "full_name": "Mohammad Rubel",
+    "phone": "01607005867",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "2980.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:02:09.992Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 18,
+  "fields": {
+    "user": null,
+    "customer_id": "23c518c7-3f6e-4352-b299-47bcadaeadf9",
+    "payment_type": "COD",
+    "full_name": "Ty",
+    "phone": "01303879878",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "2980.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:11:43.251Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 19,
+  "fields": {
+    "user": null,
+    "customer_id": "64fa7535-9533-441d-9abb-30af72f11207",
+    "payment_type": "COD",
+    "full_name": "Test User",
+    "phone": "01700000001",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "2350.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:12:52.139Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 20,
+  "fields": {
+    "user": null,
+    "customer_id": "2908dcbc-789f-4932-8183-f9088f0326bc",
+    "payment_type": "COD",
+    "full_name": "fad",
+    "phone": "01987687676",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "24000.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:16:18.429Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 21,
+  "fields": {
+    "user": null,
+    "customer_id": "ce1f2959-5316-4d50-afd7-c3c76a839014",
+    "payment_type": "COD",
+    "full_name": "Ahf",
+    "phone": "01303987654",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "1300.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:17:42.423Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 22,
+  "fields": {
+    "user": null,
+    "customer_id": "d86edffb-a40b-49ad-a955-a1d1c7753879",
+    "payment_type": "COD",
+    "full_name": "JAhjd",
+    "phone": "01798765422",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "2980.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:20:08.335Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 23,
+  "fields": {
+    "user": 3,
+    "customer_id": "b4e37828-e206-4e4a-88c3-65e5ebe7d502",
+    "payment_type": "COD",
+    "full_name": "Rubel Defy Test",
+    "phone": "01607005867",
+    "address": "Dhaka",
+    "total_amount": "1390.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:25:05.873Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 24,
+  "fields": {
+    "user": 3,
+    "customer_id": "525d6d3f-31f0-4ca8-b1b1-9890fa8a28fa",
+    "payment_type": "COD",
+    "full_name": "Rubel Defy Verification",
+    "phone": "01607005867",
+    "address": "Dhaka, Dhanmondi",
+    "total_amount": "2780.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:27:04.932Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 25,
+  "fields": {
+    "user": 8,
+    "customer_id": "c04304be-9d8c-441c-a205-fd480bacbfe7",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01303760298",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "2980.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:31:21.850Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 26,
+  "fields": {
+    "user": 8,
+    "customer_id": "e90d56ed-7635-4fc3-a835-8c56b98e0635",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01303987654",
+    "address": "Dhamrai, Dhaka",
+    "total_amount": "1300.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:34:47.691Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 27,
+  "fields": {
+    "user": 8,
+    "customer_id": "0665a131-c66b-4dc0-926d-140b37f2bb6a",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01303870296",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "24000.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:40:40.302Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 28,
+  "fields": {
+    "user": 8,
+    "customer_id": "4582e728-73ab-4431-823f-8f2215fc53ac",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01303987654",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "1300.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:45:02.823Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 29,
+  "fields": {
+    "user": 8,
+    "customer_id": "3e238eca-9489-4ef9-b7c2-4a51d547908b",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01409867538",
+    "address": "Dhamrai, Savar, Dhaka",
+    "total_amount": "2980.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:50:28.527Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 30,
+  "fields": {
+    "user": 8,
+    "customer_id": "e6342ccc-b15a-4e27-aa91-e974b1333cc4",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01303987654",
+    "address": "Dhamrai, Dhaka, Dhaka",
+    "total_amount": "2980.00",
+    "status": "pending",
+    "created_at": "2026-06-18T06:55:33.774Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 31,
+  "fields": {
+    "user": null,
+    "customer_id": "fad15fe5-90e5-4ed9-abf6-61f18a74ee30",
+    "payment_type": "COD",
+    "full_name": "ksjjk",
+    "phone": "01409876543",
+    "address": "dhka, Dhaka",
+    "total_amount": "2980.00",
+    "status": "pending",
+    "created_at": "2026-06-18T08:39:18.931Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 32,
+  "fields": {
+    "user": null,
+    "customer_id": "a817abf7-69ec-42f7-9406-080af8a6283e",
+    "payment_type": "COD",
+    "full_name": "Abir",
+    "phone": "01303860286",
+    "address": "Dhaka, Dhaka",
+    "total_amount": "11000.00",
+    "status": "pending",
+    "created_at": "2026-06-18T10:05:52.856Z"
+  }
+},
+{
+  "model": "order.order",
+  "pk": 33,
+  "fields": {
+    "user": 8,
+    "customer_id": "7e59a797-1e2b-48bb-9089-79feede0002d",
+    "payment_type": "COD",
+    "full_name": "Sadia Islam Shampa",
+    "phone": "01303750287",
+    "address": "Chandmia Housing, Mohammdpur, Dhaka, Dhaka",
+    "total_amount": "1490.00",
+    "status": "pending",
+    "created_at": "2026-06-18T10:24:58.092Z"
   }
 },
 {
@@ -880,19 +1143,9 @@
   "pk": 1,
   "fields": {
     "order": 1,
-    "product": 2,
+    "product": 3,
     "quantity": 1,
-    "price": "900.00"
-  }
-},
-{
-  "model": "order.orderitem",
-  "pk": 2,
-  "fields": {
-    "order": 2,
-    "product": 1,
-    "quantity": 1,
-    "price": "2000.00"
+    "price": "2350.00"
   }
 },
 {
@@ -900,9 +1153,9 @@
   "pk": 3,
   "fields": {
     "order": 3,
-    "product": 5,
+    "product": 7,
     "quantity": 1,
-    "price": "1580.00"
+    "price": "1200.00"
   }
 },
 {
@@ -910,9 +1163,460 @@
   "pk": 4,
   "fields": {
     "order": 4,
+    "product": 3,
+    "quantity": 1,
+    "price": "2350.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 5,
+    "product": 2,
+    "quantity": 1,
+    "price": "1390.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 6,
     "product": 6,
     "quantity": 1,
-    "price": "950.00"
+    "price": "1490.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 7,
+    "product": 3,
+    "quantity": 1,
+    "price": "2350.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 8,
+  "fields": {
+    "order": 8,
+    "product": 2,
+    "quantity": 1,
+    "price": "1390.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 9,
+  "fields": {
+    "order": 9,
+    "product": 10,
+    "quantity": 1,
+    "price": "24000.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 10,
+  "fields": {
+    "order": 10,
+    "product": 10,
+    "quantity": 1,
+    "price": "24000.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 11,
+  "fields": {
+    "order": 11,
+    "product": 3,
+    "quantity": 1,
+    "price": "2350.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 12,
+  "fields": {
+    "order": 12,
+    "product": 8,
+    "quantity": 1,
+    "price": "450.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 13,
+  "fields": {
+    "order": 13,
+    "product": 10,
+    "quantity": 1,
+    "price": "24000.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 14,
+  "fields": {
+    "order": 14,
+    "product": 5,
+    "quantity": 1,
+    "price": "1350.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 15,
+  "fields": {
+    "order": 15,
+    "product": 10,
+    "quantity": 1,
+    "price": "24000.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 16,
+  "fields": {
+    "order": 16,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 17,
+  "fields": {
+    "order": 17,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 18,
+  "fields": {
+    "order": 18,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 19,
+  "fields": {
+    "order": 19,
+    "product": 3,
+    "quantity": 1,
+    "price": "2350.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 20,
+  "fields": {
+    "order": 20,
+    "product": 10,
+    "quantity": 1,
+    "price": "24000.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 21,
+  "fields": {
+    "order": 21,
+    "product": 12,
+    "quantity": 1,
+    "price": "1300.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 22,
+  "fields": {
+    "order": 22,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 23,
+  "fields": {
+    "order": 23,
+    "product": 2,
+    "quantity": 1,
+    "price": "1390.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 24,
+  "fields": {
+    "order": 24,
+    "product": 2,
+    "quantity": 2,
+    "price": "1390.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 25,
+  "fields": {
+    "order": 25,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 26,
+  "fields": {
+    "order": 26,
+    "product": 12,
+    "quantity": 1,
+    "price": "1300.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 27,
+  "fields": {
+    "order": 27,
+    "product": 10,
+    "quantity": 1,
+    "price": "24000.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 28,
+  "fields": {
+    "order": 28,
+    "product": 12,
+    "quantity": 1,
+    "price": "1300.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 29,
+  "fields": {
+    "order": 29,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 30,
+  "fields": {
+    "order": 30,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 31,
+  "fields": {
+    "order": 31,
+    "product": 11,
+    "quantity": 1,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 32,
+  "fields": {
+    "order": 32,
+    "product": 11,
+    "quantity": 2,
+    "price": "2980.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 33,
+  "fields": {
+    "order": 32,
+    "product": 12,
+    "quantity": 1,
+    "price": "1300.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 34,
+  "fields": {
+    "order": 32,
+    "product": 3,
+    "quantity": 1,
+    "price": "2350.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 35,
+  "fields": {
+    "order": 32,
+    "product": 2,
+    "quantity": 1,
+    "price": "1390.00"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 36,
+  "fields": {
+    "order": 33,
+    "product": 6,
+    "quantity": 1,
+    "price": "1490.00"
+  }
+},
+{
+  "model": "authentication.customerprofile",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "avatar": "media/avatars/p1_hcpdq4",
+    "phone": "01607005806",
+    "address": "Dhamrai, Dhaka, Bangladesh",
+    "created_at": "2026-06-16T10:38:43.359Z"
+  }
+},
+{
+  "model": "authentication.customerprofile",
+  "pk": 2,
+  "fields": {
+    "user": 7,
+    "avatar": "",
+    "phone": "01712345678",
+    "address": "House 12, Road 5, Dhanmondi, Dhaka",
+    "created_at": "2026-06-16T10:39:07.713Z"
+  }
+},
+{
+  "model": "authentication.customerprofile",
+  "pk": 3,
+  "fields": {
+    "user": 8,
+    "avatar": "",
+    "phone": "01303750287",
+    "address": "Chandmia Housing, Mohammdpur, Dhaka",
+    "created_at": "2026-06-18T06:30:41.084Z"
+  }
+},
+{
+  "model": "banner.banner",
+  "pk": 1,
+  "fields": {
+    "title": "New Season Gadgets",
+    "subtitle": "Best deals on latest tech products",
+    "image": "media/banners/banner_lqmzjz",
+    "cta": "Shop Now",
+    "href": "/shop",
+    "accent_color": "#ff4d4d",
+    "is_active": true,
+    "created_at": "2026-06-01T10:37:46.891Z"
+  }
+},
+{
+  "model": "banner.banner",
+  "pk": 2,
+  "fields": {
+    "title": "Portable Bluetooth Speaker Xtreme",
+    "subtitle": "Deep bass, waterproof design & 12 hours playtime",
+    "image": "media/banners/speaker_las0hi",
+    "cta": "Shop speaker",
+    "href": "/shop",
+    "accent_color": "#ff4d4d",
+    "is_active": true,
+    "created_at": "2026-06-01T11:12:00.963Z"
+  }
+},
+{
+  "model": "banner.notificationbanner",
+  "pk": 1,
+  "fields": {
+    "title": "Summer Campain",
+    "image": "media/notification_banners/summer-sale-banner-discount_yg2jbe",
+    "target_url": "/",
+    "is_active": false,
+    "start_date": null,
+    "end_date": null,
+    "created_at": "2026-06-10T07:14:07.945Z",
+    "updated_at": "2026-06-10T09:24:31.922Z"
+  }
+},
+{
+  "model": "banner.notificationbanner",
+  "pk": 2,
+  "fields": {
+    "title": "Ghee",
+    "image": "media/notification_banners/ghorer-bazar-ghee_pvz91e",
+    "target_url": "/",
+    "is_active": false,
+    "start_date": null,
+    "end_date": null,
+    "created_at": "2026-06-10T09:25:30.156Z",
+    "updated_at": "2026-06-10T09:35:06.405Z"
+  }
+},
+{
+  "model": "banner.notificationbanner",
+  "pk": 3,
+  "fields": {
+    "title": "Hello",
+    "image": "media/notification_banners/banners_zj9qh0",
+    "target_url": "/",
+    "is_active": false,
+    "start_date": null,
+    "end_date": null,
+    "created_at": "2026-06-10T10:47:22.537Z",
+    "updated_at": "2026-06-10T10:59:27.362Z"
+  }
+},
+{
+  "model": "banner.notificationbanner",
+  "pk": 4,
+  "fields": {
+    "title": "Hi",
+    "image": "media/notification_banners/buyfest_banner_d7ykti",
+    "target_url": "/",
+    "is_active": true,
+    "start_date": null,
+    "end_date": null,
+    "created_at": "2026-06-10T10:58:03.944Z",
+    "updated_at": "2026-06-10T10:59:05.697Z"
+  }
+},
+{
+  "model": "banner.notificationbanner",
+  "pk": 6,
+  "fields": {
+    "title": "Deshi Aam",
+    "image": "media/notification_banners/ghoreer-bazar-mongo-notify-banner_xidqzu",
+    "target_url": "/",
+    "is_active": false,
+    "start_date": null,
+    "end_date": null,
+    "created_at": "2026-06-11T05:54:29.882Z",
+    "updated_at": "2026-06-11T05:56:30.692Z"
   }
 }
 ]

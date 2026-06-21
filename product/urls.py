@@ -57,4 +57,10 @@ urlpatterns = [
         ProductReviewAddAPIView.as_view(),
         name="product-review-add"
     ),
+    # Stock Update
+    path(
+        "products/<int:pk>/update-stock/",
+        ProductUpdateStockAPIView.as_view(),
+        name="product-update-stock"
+    ),
 ]
