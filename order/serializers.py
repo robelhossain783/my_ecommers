@@ -31,6 +31,13 @@ class CreateOrderSerializer(serializers.Serializer):
     phone = serializers.CharField()
     address = serializers.CharField()
 
+    delivery_charge = serializers.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0,
+        required=False
+    )
+
     payment_type = serializers.ChoiceField(
         choices=[
             ("COD", "Cash on Delivery"),

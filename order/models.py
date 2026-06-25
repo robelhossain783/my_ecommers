@@ -41,6 +41,18 @@ class Order(models.Model):
     phone = models.CharField(max_length=20)
     address = models.TextField()
 
+    delivery_charge = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0
+    )
+
+    transaction_id = models.CharField(
+        max_length=255,
+        blank=True,
+        default=''
+    )
+
     total_amount = models.DecimalField(
         max_digits=12,
         decimal_places=2

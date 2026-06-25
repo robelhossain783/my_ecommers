@@ -83,6 +83,7 @@ class CreateOrderAPIView(APIView):
             phone=phone,
             address=address,
             payment_type=payment_type,
+            delivery_charge=data.get("delivery_charge", 0),
             total_amount=total_amount
         )
 
